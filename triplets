@@ -1,0 +1,48 @@
+class Result {
+
+    /*
+     * Complete the 'compareTriplets' function below.
+     *
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY a
+     *  2. INTEGER_ARRAY b
+     */
+
+    
+       
+        public static void main (String[]args){
+        List<Integer>alice=new ArrayList<>();
+        List<Integer>bobby=new ArrayList<>();
+        alice.add(17);
+        alice.add(28);
+        alice.add(30);
+        bobby.add(99);
+        bobby.add(16);
+        bobby.add(8);
+        List<Integer>result= compareTriplets(alice,bobby);
+        String output=result.get(0)+" "+result.get(1);
+        System.out.println(output);
+    }
+
+    public static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        List<Integer> resultList = new LinkedList<>();
+        int x=0;
+        int y=0;
+        for(int i=0;i<a.size();i++)
+            if(a.get(i)>b.get(i)){
+                x++;
+            }
+            else{
+             y++;
+            }
+        }
+        resultList.add(x);
+        resultList.add(y);
+
+        return resultList;
+    }
+
+    
+
+}
